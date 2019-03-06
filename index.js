@@ -2,12 +2,13 @@
 
 const express = require('express')
 const server = express()
-
+const cors = require('cors')
 const Userdb = require('./data/helpers/userDb')
 
 const parser = express.json()
 
-server.use(parser);
+
+server.use(parser, cors() ) 
 
 const port = 7000
 
