@@ -15,7 +15,7 @@ const parser = express.json()
 // middleware
 server.use(parser, cors(), helmet() ) 
 
-server.use('./users', users)
+server.use('/users', users)
 server.use('/posts', posts)
 
 const port = 7000
